@@ -8,21 +8,9 @@
   --line: #1a1a1a;
 }
 
-.fb-login{
-  background: var(--tag);
-  color: var(--ink);
-  font-weight: 600;
-  border: 0;
-}
-
 .fb-label{
 font-weight: bold;
 color: #000000;
-}
-
-.fb-input{
-border-radius: 8px;
-margin-bottom: 15px;
 }
 
 body {
