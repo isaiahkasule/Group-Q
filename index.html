@@ -8,75 +8,7 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
-  <header class="fb-nav sticky-top">
-    <!-- SECTION 2: NAVBAR (Member 2) -->
-    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-      <div class="container">
-        <!-- Brand / Logo -->
-        <a class="navbar-brand fb-logo d-flex align-items-center gap-2" href="#">
-          <span>🔍</span> Findback
-        </a>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar Links & Action Button -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#items-section">Browse Items</a>
-            </li>
-
-          <!--login link-->
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">login</a>
-            </li>
-            <li class="nav-item ms-lg-2">
-              <!-- Button triggers the popup modal owned by Member 6 -->
-              <button type="button" class="btn fb-btn fw-semibold px-3" data-bs-toggle="modal" data-bs-target="#reportModal">
-                + Report an Item
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <section class="fb-hero">
-    <!-- SECTION 3: HERO (Member 3) -->
-  <div class="container">
-  <h1>Lost Something? Let's Help You Find It.</h1>
-  <p class="lead">
-    Findback helps students reconnect with their lost belongings around campus.
-    Search for an item or explore a category below.
-  </p>
-
-  <div class="row g-2">
-    <div class="col-12 col-md-8">
-      <input type="text" id="searchInput" class="form-control form-control-lg"
-             placeholder="Search for an item, e.g. phone or ID card"
-             aria-label="Search for an item">
-    </div>
-    <div class="col-12 col-md-4">
-      <select id="categorySelect" class="form-select form-select-lg"
-              aria-label="Filter by category">
-        <option value="all">All Categories</option>
-        <option value="electronics">Electronics</option>
-        <option value="documents">Documents and IDs</option>
-        <option value="clothing">Clothing</option>
-        <option value="bags">Bags</option>
-        <option value="other">Other Items</option>
-      </select>
-    </div>
-  </div>
-  </div>
-  </section>
 
   <main class="container py-4 flex-grow-1"  id="items-section">
     <!-- SECTION 4: FILTER BUTTONS + CARDS (Member 4) -->
@@ -166,20 +98,6 @@
 </div>
   </main>
 
-  <footer class="fb-footer">
-    <!-- SECTION 2: FOOTER (Member 2) -->
-    <div class="container text-center text-md-start">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-3 mb-md-0">
-        <h5 class="fw-bold mb-1">Findback</h5>
-        <p class="small mb-0">Reconnecting students with their lost belongings on campus.</p>
-      </div>
-      <div class="col-md-6 text-md-end">
-        <p class="small mb-0">&copy; 2026 Findback Student Project. Built for demonstration.</p>
-      </div>
-    </div>
-  </div>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
