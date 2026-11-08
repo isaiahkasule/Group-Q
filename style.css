@@ -8,6 +8,16 @@
   --line: #1a1a1a;
 }
 
+.fb-outline-btn {
+  color: #ffffff;
+  border: 0;
+}
+
+.fb-outline-btn:hover {
+  background: var(--tag);
+  color: var(--ink);
+}
+
 .fb-label{
 font-weight: bold;
 color: #000000;
