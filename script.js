@@ -8,26 +8,60 @@ reportForm.addEventListener("submit", function (event) {
   bootstrap.Modal.getInstance(document.getElementById("reportModal")).hide();
 });
 
-// Lost / Found / All filter
+
+ // Lost / Found / All filter
+
 const filterButtons = document.querySelectorAll("#statusFilter button");
 const cards = document.querySelectorAll(".fb-card");
+const searchInput = document.getElementById("searchInput");
+
+// Filter items
+function filterItems() {
+
+  const activeButton = document.querySelector("#statusFilter .active");
+  const status = activeButton.dataset.status;
+  const searchText = searchInput.value.toLowerCase();
+
+  cards.forEach(function (card) {
+
+    const column = card.parentElement;
+    const itemName = card.querySelector(".fb-title").textContent.toLowerCase();
+
+    if (
+      (status === "" || card.dataset.status === status) &&
+      itemName.includes(searchText)
+    ) {
+      column.classList.remove("d-none");
+    } else {
+      column.classList.add("d-none");
+    }
+
+  });
+
+}
+
+// Listen for filter button clicks
 
 filterButtons.forEach(function (button) {
+
   button.addEventListener("click", function () {
-    const status = button.dataset.status;
 
     filterButtons.forEach(function (b) {
       b.classList.remove("active");
     });
+
     button.classList.add("active");
 
-    cards.forEach(function (card) {
-      const column = card.parentElement;
-      if (status === "" || card.dataset.status === status) {
-        column.classList.remove("d-none");
-      } else {
-        column.classList.add("d-none");
-      }
-    });
+    filterItems();
+
   });
+
 });
+
+// Listen for typing in the search bar
+
+searchInput.addEventListener("input", function () {
+  filterItems();
+});
+
+
