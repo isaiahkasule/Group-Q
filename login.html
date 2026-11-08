@@ -9,30 +9,35 @@
 </head>
 
 <body>
-<div class="row g-3 align-items-center fb-login">
-<div class="mb-3 ">
-    <label for="access-number" class="col-form-label fb-label">ACCESS NUMBER</label>
-  </div>
-  <div class="col-auto">
-    <input type="text" id="access-number" class="form-control fb-input" >
-  </div>
+<div class="fb-login py-5">
+  <div class="container">
+  <div class="row justify-content-center">
+  <div class="col-11 col-sm-8 col-md-6 col-lg-4">
 
-  
-  <div class="mb-3 ">
-    <label for="inputPassword6" class="col-form-label fb-label">Password</label>
-  </div>
-  <div class="col-auto">
-    <input type="password" id="inputPassword6" class="form-control fb-input" aria-describedby="passwordHelpInline">
-  </div>
-  <div class="col-auto">
-    <span id="passwordHelpInline" class="form-text">
-      Must be 8-20 characters long.
-    </span>
-  </div>
+        <form class="text-center">
+
+          <div class="mb-3">
+            <label for="access-number" class="form-label fb-label">ACCESS NUMBER</label>
+            <input type="text" id="access-number" class="form-control fb-input">
+          </div>
+
+          <div class="mb-3">
+            <label for="inputPassword6" class="form-label fb-label">Password</label>
+            <input type="password" id="inputPassword6" class="form-control fb-input"
+                   aria-describedby="passwordHelpInline">
+            <div id="passwordHelpInline" class="form-text">
+              Must be 8-20 characters long.
+            </div>
+          </div>
+
+          <button class="btn btn-primary fb-button" onclick="window.location.href='index.html'">Login</button>
+
+     </form>
+
+   </div>
+   </div>
+   </div>
 </div>
- 
-
-<button class="btn btn-primary fb-button" onclick="window.location.href='index.html'">LOGIN</button>
 
 <footer class="fb-footer">
     <div class="container text-center text-md-start">
