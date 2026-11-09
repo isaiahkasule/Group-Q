@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Report Lost or Found Item - FindBack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="fb-nav sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm" data-bs-theme="dark">
+    <div class="container">
+      <!-- Brand Logo & Name -->
+      <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#">
+        <i class="bi bi-search-heart me-2"></i>FindBack <span class="badge bg-warning text-dark ms-2 fs-6">UCU</span>
+      </a>
+    </div> <!-- added: this closing tag was missing -->
+    </nav>
+  </header>
+
+<main class="container py-5 flex-grow-1">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-7">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+
+    <form action="index.html"> 
+    <h1 class="h4 mb-1">Report a Lost or Found Item</h1>
+    <p class="text-muted small mb-4">Please fill out the form below to report an item.</p>
+
+        <fieldset class="border rounded p-3 mb-3">
+            <legend class="float-none w-auto px-2 fs-6">Report Type</legend>
+            <label>
+                <input type="radio" class="form-check-input me-2" name="report_type" value="lost" required> I Lost Something
+            </label>
+            <br>
+            <label>
+                <input type="radio" class="form-check-input me-2" name="report_type" value="found"> I Found Something
+            </label>
+        </fieldset>
+
+        <fieldset class="border rounded p-3 mb-3">
+            <legend class="float-none w-auto px-2 fs-6">Item Details</legend>
+            
+            <p>
+                <label for="item_name" class="form-label">Item Name / Title:</label><br>
+                <input type="text" id="item_name" name="item_name" class="form-control" placeholder="e.g., iPhone 13, Leather Wallet" required>
+            </p>
+
+            <p>
+                <label for="category" class="form-label">Category:</label><br>
+                <select id="category" name="category" class="form-select" required>
+                    <option value="">-- Select a Category --</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="keys">Keys</option>
+                    <option value="clothing">Clothing & Bags</option>
+                    <option value="documents">Documents / ID Cards</option>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="description" class="form-label">Detailed Description:</label><br>
+                <textarea id="description" name="description" class="form-control" rows="5" placeholder="Describe colors, brand, serial numbers, or unique marks..." required></textarea>
+            </p>
+
+            <p>
+                <label for="item_image" class="form-label">Upload Photo (Optional):</label><br>
+                <input type="file" id="item_image" name="item_image" class="form-control" accept="image/*">
+            </p>
+        </fieldset>
+
+        <fieldset class="border rounded p-3 mb-3">
+            <legend class="float-none w-auto px-2 fs-6">When & Where</legend>
+            
+            <p>
+                <label for="date" class="form-label">Date Lost/Found:</label><br>
+                <input type="date" id="date" name="date" class="form-control" required>
+            </p>
+
+            <p>
+                <label for="location" class="form-label">Location:</label><br>
+                <input type="text" id="location" name="location" class="form-control" placeholder="e.g., Main Cafeteria, Science Block Room 204" required>
+            </p>
+        </fieldset>
+
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn fb-btn">Submit Report</button>
+            <button type="reset" class="btn btn-secondary">Clear Form</button>
+        </div>
+
+    </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+    <footer class="bg-dark text-light pt-5 pb-3 mt-auto">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Column 1: App Info -->
+        <div class="col-lg-4 col-md-6">
+          <a class="text-white text-decoration-none fs-4 fw-bold d-block mb-2" href="#">
+            <i class="bi bi-search-heart text-warning me-2"></i>FindBack UCU
+          </a>
+          <p class="text-muted">The official lost & found system for Uganda Christian University. Reuniting UCU students, faculty, and staff with missing items quickly and safely.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="text-uppercase fw-bold mb-3 text-warning">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-light text-decoration-none opacity-75 opacity-100-hover">Report Lost Item</a></li>
+            <li class="mb-2"><a href="#" class="text-light text-decoration-none opacity-75 opacity-100-hover">Report Found Item</a></li>
+            <li class="mb-2"><a href="#" class="text-light text-decoration-none opacity-75 opacity-100-hover">UCU Security Hubs</a></li>
+            <li class="mb-2"><a href="#" class="text-light text-decoration-none opacity-75 opacity-100-hover">Safety Guidelines</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Campus Support -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="text-uppercase fw-bold mb-3 text-warning">UCU Support</h6>
+          <p class="text-muted mb-1"><i class="bi bi-shield-check me-2 text-primary"></i> UCU Security Office</p>
+          <p class="text-muted mb-1"><i class="bi bi-geo-alt me-2 text-primary"></i> Main Campus, Mukono</p>
+          <p class="text-muted mb-0"><i class="bi bi-telephone me-2 text-primary"></i> +256 (0) 414 670 600</p>
+        </div>
+
+        <!-- Column 4: Newsletter / Updates -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="text-uppercase fw-bold mb-3 text-warning">Item Alerts</h6>
+          <p class="text-muted small">Subscribe using your @ucu.ac.ug email for lost item alerts.</p>
+          <div class="input-group">
+            <input type="email" class="form-control form-control-sm" placeholder="student@ucu.ac.ug">
+            <button class="btn btn-warning btn-sm fw-semibold" type="button">Join</button>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-secondary">
+
+      <!-- Bottom Bar -->
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0 text-muted small">&copy; 2026 FindBack - Uganda Christian University. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-light me-3 opacity-75 opacity-100-hover"><i class="bi bi-instagram fs-5"></i></a>
+          <a href="#" class="text-light me-3 opacity-75 opacity-100-hover"><i class="bi bi-discord fs-5"></i></a>
+          <a href="#" class="text-light opacity-75 opacity-100-hover"><i class="bi bi-twitter-x fs-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
