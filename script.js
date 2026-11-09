@@ -3,17 +3,6 @@
 
 const reportForm = document.getElementById("reportForm");
 
-reportForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    alert("Thanks! The report will be saved once the backend is connected.");
-
-    reportForm.reset();
-
-    bootstrap.Modal.getInstance(document.getElementById("reportModal")).hide();
-});
-
-
 // Lost / Found / All filter
 
 const filterButtons = document.querySelectorAll("#statusFilter button");
