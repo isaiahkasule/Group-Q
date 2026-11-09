@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report an Item - Lost & Found</title>
+</head>
+<body>
+
+    <h1>Report a Lost or Found Item</h1>
+    <p>Please fill out the form below to report an item.</p>
+
+        
+
+        <fieldset>
+            <legend>Report Type</legend>
+            <label>
+                <input type="radio" name="report_type" value="lost" required> I Lost Something
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="report_type" value="found"> I Found Something
+            </label>
+        </fieldset>
+ <br>
+
+    
+        <fieldset>
+            <legend>Item Details</legend>
+            
+            <p>
+                <label for="item_name">Item Name / Title:</label><br>
+                <input type="text" id="item_name" name="item_name" placeholder="e.g., iPhone 13, Leather Wallet" required>
+            </p>
+
+            <p>
+                <label for="category">Category:</label><br>
+                <select id="category" name="category" required>
+                    <option value="">-- Select a Category --</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="keys">Keys</option>
+                    <option value="clothing">Clothing & Bags</option>
+                    <option value="documents">Documents / ID Cards</option>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="description">Detailed Description:</label><br>
+                <textarea id="description" name="description" rows="5" cols="40" placeholder="Describe colors, brand, serial numbers, or unique marks..." required></textarea>
+            </p>
+
+            <p>
+                <label for="item_image">Upload Photo (Optional):</label><br>
+                <input type="file" id="item_image" name="item_image" accept="image/*">
+            </p>
+        </fieldset>
+ <br>
+
+
+        <fieldset>
+            <legend>When & Where</legend>
+            
+            <p>
+                <label for="date">Date Lost/Found:</label><br>
+                <input type="date" id="date" name="date" required>
+            </p>
+
+            <p>
+                <label for="location">Location:</label><br>
+                <input type="text" id="location" name="location" placeholder="e.g., Main Cafeteria, Science Block Room 204" required>
+            </p>
+        </fieldset>
+
+        <br>
+
+     
+        <div>
+            <button type="submit">Submit Report</button>
+            <button type="reset">Clear Form</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
